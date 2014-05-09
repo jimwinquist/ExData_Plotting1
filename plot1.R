@@ -9,10 +9,9 @@ power.data <- read.table("./data/household_power_consumption.txt", header = TRUE
 power.data$Datetime <- as.POSIXct(strptime(paste(power.data$Date, power.data$Time), "%d/%m/%Y%H:%M:%S"), tz = "EST")
 
 ## Subset data based on specified frame range
-new.range <- with(power.data, subset(power.data, power.data$Datetime >= as.POSIXct('2007-02-01 
-00:00:00', tz="EST"))) 
-new.range <- with(new.range, subset(new.range, new.range$Datetime < as.POSIXct('2007-02-03 
-00:00:00', tz="EST"))) 
+new.range <- with(power.data, subset(power.data, 
+                                     power.data$Datetime >= as.POSIXct('2007-02-01 00:00:00', tz="EST") 
+                                     & power.data$Datetime < as.POSIXct('2007-02-03 00:00:00', tz="EST")))
 
 png(file = "./data/plot1.png",width=480,height=480)
 hist(as.numeric(new.range$Global_active_power), col = "red", 

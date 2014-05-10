@@ -13,6 +13,7 @@ new.range <- with(power.data, subset(power.data,
                                      power.data$Datetime >= as.POSIXct('2007-02-01 00:00:00', tz="EST") 
                                      & power.data$Datetime < as.POSIXct('2007-02-03 00:00:00', tz="EST")))
 
+## Plot the Data
 png(file = "./data/plot3.png",width=480,height=480)
 plot(new.range$Datetime, as.numeric(new.range$Sub_metering_1), col="black",
       type = "l", xlab = "", ylab = "Energy sub metering")

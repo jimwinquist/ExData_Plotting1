@@ -13,6 +13,7 @@ new.range <- with(power.data, subset(power.data,
                                      power.data$Datetime >= as.POSIXct('2007-02-01 00:00:00', tz="EST") 
                                      & power.data$Datetime < as.POSIXct('2007-02-03 00:00:00', tz="EST")))
 
+## Plot the data
 png(file = "./data/plot1.png",width=480,height=480)
 hist(as.numeric(new.range$Global_active_power), col = "red", 
      xlab = "Global Active Power (kilowatts)", main = "Global Active Power")

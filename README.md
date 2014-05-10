@@ -95,7 +95,7 @@ The four plots that you will need to construct are shown below.
 ### Plot 1
 
 
-![plot of plot1](plot1.png)
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png)
 
 
 ### Plot 2

@@ -16,7 +16,7 @@ new.range <- with(power.data, subset(power.data,
 ## Plot the Data
 png(file = "./data/plot3.png",width=480,height=480)
 plot(new.range$Datetime, as.numeric(new.range$Sub_metering_1), col="black",
-      type = "l", xlab = "", ylab = "Energy sub metering")
+      type = "l", xlab = "", ylab = "Energy sub metering", bg="transparent")
 lines(new.range$Datetime, as.numeric(new.range$Sub_metering_2), col="red")
 lines(new.range$Datetime, as.numeric(new.range$Sub_metering_3), col="blue")
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 

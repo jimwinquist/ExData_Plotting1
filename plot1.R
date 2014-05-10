@@ -16,5 +16,5 @@ new.range <- with(power.data, subset(power.data,
 ## Plot the data
 png(file = "./data/plot1.png",width=480,height=480)
 hist(as.numeric(new.range$Global_active_power), col = "red", 
-     xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
+     xlab = "Global Active Power (kilowatts)", main = "Global Active Power", bg="transparent")
 dev.off()

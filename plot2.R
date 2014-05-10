@@ -16,5 +16,5 @@ new.range <- with(power.data, subset(power.data,
 ## Plot the data
 png(file = "./data/plot2.png",width=480,height=480)
 plot(new.range$Datetime, as.numeric(new.range$Global_active_power), 
-     xlab = "", ylab = "Global Active Power (kilowatts)", type = "l")
+     xlab = "", ylab = "Global Active Power (kilowatts)", type = "l", bg="transparent")
 dev.off()
